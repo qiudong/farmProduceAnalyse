@@ -7,6 +7,10 @@ apply plugin: 'org.springframework.boot'
 sourceCompatibility = 1.8
 
 repositories {
+    /**
+     * 先让gradle从本地仓库找,找不到再从下面的mavenCentral()中央仓库去找jar包
+     */
+    mavenLocal()
     mavenCentral()
 }
 
@@ -21,6 +25,6 @@ buildscript {
 
 }
 dependencies {
-    compile 'org.openanzo.dependencies:org.apache.commons.httpclient:3.1'
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf:2.0.3.RELEASE'
     compile project(":template-core")
 }

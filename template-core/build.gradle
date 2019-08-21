@@ -6,6 +6,10 @@ apply plugin: 'java'
 sourceCompatibility = 1.8
 
 repositories {
+    /**
+     * 先让gradle从本地仓库找,找不到再从下面的mavenCentral()中央仓库去找jar包
+     */
+    mavenLocal()
     mavenCentral()
 }
 
@@ -15,5 +19,7 @@ dependencies {
     compile 'mysql:mysql-connector-java:8.0.11'
     compile 'org.mybatis:mybatis:3.2.1'
     compile 'com.alibaba:druid:1.1.10'
+//    compile 'net.sf.json-lib:json-lib:2.4'
+    compile 'com.alibaba:fastjson:1.2.59'
     compile 'org.projectlombok:lombok:1.16.22'
 }
