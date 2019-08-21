@@ -41,7 +41,7 @@ class UserController {
         }).count();
         if (count > 0) {
             // 登陆成功
-            return "map.html";
+            return "index.html";
         } else {
             return "login.html";
         }
