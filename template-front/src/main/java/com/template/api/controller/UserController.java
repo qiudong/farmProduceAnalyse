@@ -21,10 +21,10 @@ class UserController {
 
     @GetMapping
     public String getView() {
-        return "login.html";
+        return "login";
     }
 
-    @PostMapping("user/login")
+    @PostMapping("login")
     public String login(String username, String password) {
 
         String jsonStr = getFileContent();
@@ -41,9 +41,9 @@ class UserController {
         }).count();
         if (count > 0) {
             // 登陆成功
-            return "index.html";
+            return "index";
         } else {
-            return "login.html";
+            return "login";
         }
 
     }
